@@ -182,6 +182,12 @@ ul{
                 margin-left: 5px;
         }
 }
+@media (max-width: 500px) {
+        .wrapper {
+                grid-template-columns:repeat(auto-fill,minmax(285px, 1fr));
+                margin-left: 5px;
+        }
+}
 /* start Welcome */
 .page .content-area .wrapper .welcome{
         overflow: hidden;
@@ -501,6 +507,9 @@ ul{
         background-color: #0077b5;
 }
 /* start projects */
+.projects{
+        margin: 5px;
+}
 .Resposive-table{
        overflow: auto;
 }
@@ -848,10 +857,9 @@ table{
         margin-right: 10px;
 }
 @media (max-width:768px) {
-        .boxs-profil{
-                flex-direction: column;
-        }
-        .page .boxs .box{
+        .boxs-profil,
+        .page .boxs .box,
+        .skills-activities{
                 flex-direction: column;
         }
         .page .boxs-profil .avatar{
@@ -865,6 +873,14 @@ table{
         }
         .page .box .toggle-switch{
                 margin: auto;
+        }
+        .box-activites img{
+                width: 40px;
+                height: 40px;
+                margin-right: 0;
+        }
+        .box-activites{
+                padding: 10px;
         }
 }
 /* start projects */
@@ -914,18 +930,6 @@ table{
 .page .projects-page .lang p{
         padding: 5px 8px;
 }
-@media (max-width:768px) {
-        .page .projects-page .lang{
-                display: flex;
-                flex-direction: column;
-        }
-        .page .projects-page .lang p{
-                width: fit-content;
-        }
-        .page .projects-page .lang p:not(:last-child){
-                margin-bottom: 8px;
-        }
-}
 .page .projects-page .percentage{
         border-top: 1px solid #eee;
         padding: 20px 0 0;
@@ -945,15 +949,35 @@ table{
         left: 0;
         height: 100%;
 }
+@media (max-width:768px) {
+        .page .projects-page .text{
+                margin-top: 10px;
+        }
+        .page .projects-page .lang{
+                display: flex;
+                flex-direction: column;
+        }
+        .page .projects-page .lang p{
+                width: fit-content;
+        }
+        .page .projects-page .lang p:not(:last-child){
+                margin-bottom: 8px;
+        }
+        .page .projects-page .percentage .prog{
+                width: 170px;
+        }
+}
 /* start Courses */
 .courses-boxs{
         grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
         padding: 7px;
+        margin: 20px;
 }
 .courses-boxs .box-course .image{
         overflow: hidden;
 }
 .courses-boxs .box-course .image .course{
+        width: 600px;
         max-width: 100%;
         border-radius: 10px 10px 0 0;
 }
@@ -987,9 +1011,28 @@ table{
         color: var(--green-color);
         font-weight: bold;
 }
+@media (max-width:767px) {
+        .courses-boxs {
+                grid-template-columns:repeat(auto-fill,minmax(300px, 1fr));
+                margin: 10px;
+        }
+}
+@media (max-width: 500px) {
+        .courses-boxs {
+                grid-template-columns:repeat(auto-fill,minmax(270px, 1fr));
+                margin: 5px;
+        }
+        .courses-boxs .box-course .image .Team{
+                width: 50px;
+                height: 50px;
+                left: 10px;
+                top: 10px;
+        }
+}
 /* Start Friends */
 .boxs-friends{
         grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        margin: 20px;
 }
 .box-friend .avatar img{
         width: 100px;
@@ -1020,6 +1063,15 @@ table{
 .box-friend .contact i:last-child:hover{
         background-color: var(--red-color       );
         color: white;
+}
+@media (max-width: 500px) {
+        .boxs-friends {
+                grid-template-columns:repeat(auto-fill,minmax(270px, 1fr));
+                margin: 10px;
+        }
+        .box-friend{
+                padding: 10px;
+        }
 }
 /* start plans */
 .content-area .plans .top{
@@ -1136,6 +1188,12 @@ table{
 .boxs-files .box-right a:hover i{
         animation: up-down .8s linear infinite;
         -webkit-animation: up-down .8s linear infinite;
+}
+@media (max-width:500px) {
+        .boxs-files{
+                margin: 10px;
+        }
+        
 }
 @keyframes up-down {
         0%,100%{
