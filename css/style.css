@@ -179,13 +179,13 @@ ul{
 @media (max-width: 767px) {
         .wrapper {
                 grid-template-columns:repeat(auto-fill,minmax(340px, 1fr));
-                margin-left: 5px;
+                margin: 0 10px;
         }
 }
 @media (max-width: 500px) {
         .wrapper {
                 grid-template-columns:repeat(auto-fill,minmax(285px, 1fr));
-                margin-left: 5px;
+                margin: 0 7px 0 10px;
         }
 }
 /* start Welcome */
@@ -417,8 +417,10 @@ ul{
 } 
 .reminders ul .orange >span{
         background-color:var(--orange-color);
-} .reminders ul .red >span{
-        background-color:var(--red-color);
+}
+.reminders ul .red >span{
+        background-color : var(--red-color);
+        width: 14px;
 } 
 .reminders ul .blue div{
         border-left: 2px solid var(--blue-color);
@@ -508,7 +510,7 @@ ul{
 }
 /* start projects */
 .projects{
-        margin: 5px;
+        margin: 20px 5px 5px;
 }
 .Resposive-table{
        overflow: auto;
@@ -718,7 +720,7 @@ table{
         border-radius: 50%;
         left: 0;
         top: 50%;
-        margin-top: -8px;
+        margin-top: -10px;
         transition: var(--transition);
 }
 .box-setting .radio label::before{
@@ -728,15 +730,15 @@ table{
 }
 .box-setting .radio label::after{
         position: absolute;
-        width: 13px;
-        height: 13px;
+        width: 11px;
+        height: 11px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: var(--blue-color);
-        left: 3px;
-        top: 14px;
-        transform: scale(0) ;
+        left: 4px;
+        top: 15px;
+        transform: scale(0);
 }
 .box-setting .radio input[type="radio"]:checked + label::after{
         transform: scale(1.1);
@@ -801,7 +803,7 @@ table{
 .page .boxs .box > div{
         width: 250px;
 }
-.page .boxs .box:not(:last-child){
+.page .boxs .border:not(:last-child){
         border-bottom: 1px solid #eee;
 }
 .page .boxs .box h4{
